@@ -105,10 +105,29 @@
 
         footer { text-align: center; padding: 40px; margin-top: 40px; opacity: 0.8; font-size: 0.9rem; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
-            .glass-card { padding: 30px; }
+       /* Ajuste para o Menu aparecer no Celular */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Coloca a logo em cima e o menu embaixo */
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: flex; /* Garante que o menu apareça */
+        flex-wrap: wrap; /* Permite que os links quebrem linha se necessário */
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Diminui um pouco o texto para caber melhor */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Ajusta o título para não cortar na tela */
+    }
+}
         }
     </style>
 </head>
