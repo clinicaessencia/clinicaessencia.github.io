@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos | Clínica Essência</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #5c7c8a;
+            --accent: #e67e22;
+            --whatsapp: #25d366;
+            --bg-light: #f4f7f6;
+            --glass-bg: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.6);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-light); color: #333; line-height: 1.6; }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background: #fff;
+            padding: 15px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { text-decoration: none; display: flex; flex-direction: column; }
+        .logo-text { font-size: 1.6rem; font-weight: 600; color: var(--secondary); letter-spacing: 1px; }
+        .logo-sub { font-size: 0.8rem; color: #888; text-transform: lowercase; }
+
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #555; font-weight: 500; font-size: 1rem; transition: 0.3s; position: relative; }
+        .nav-links a:hover { color: var(--secondary); }
+        
+        .nav-links a.active::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 3px;
+            background-color: var(--secondary); border-radius: 2px;
+        }
+
+        .btn-header { background: var(--primary); color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(207, 222, 243, 0.4) 0%, rgba(224, 234, 252, 0.4) 100%);
+        }
+        .hero h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; font-weight: 600; }
+        .hero p { font-size: 1.2rem; color: #555; }
+
+        /* --- CONTEÚDO --- */
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .glass-card p {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            color: #444;
+            text-align: justify;
+        }
+
+        .glass-card strong { color: var(--primary); }
+
+        .highlight-box {
+            background: white;
+            padding: 20px;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .btn-cta-about {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 8px 15px rgba(230, 126, 34, 0.2);
+        }
+
+        .btn-cta-about:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3); }
+
+        footer { text-align: center; padding: 40px; margin-top: 40px; opacity: 0.8; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            .glass-card { padding: 30px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-text">Clínica Essência</span>
+            <span class="logo-sub">clínica online</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemsomos.html" class="active">Quem Somos</a></li>
+            <li><a href="contato.html" class="btn-header">Agendar Conversa</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Nossa Missão</h1>
+        <p>Acolhimento, ética e transformação através da escuta.</p>
+    </section>
+
+    <div class="container">
+        <div class="glass-card">
+            <p>
+                O projeto <strong>Clínica Essência</strong> nasceu com o firme propósito de oferecer um 
+                atendimento psicanalítico que seja, acima de tudo, acessível, ético e profundamente humanizado.
+            </p>
+
+            <div class="highlight-box">
+                "Acreditamos que cuidar da saúde mental não deve ser um luxo, mas um caminho fundamental para a liberdade individual."
+            </div>
+
+            <p>
+                Atuamos integrando a tradição da <strong>Psicanálise Clínica</strong> com os avanços contemporâneos da <strong>Neuropsicanálise</strong>. Essa união nos permite oferecer uma escuta qualificada que compreende tanto as profundezas do inconsciente quanto as dinâmicas emocionais do dia a dia.
+            </p>
+
+            <p>
+                Nossa equipe é formada por profissionais capacitados e em constante atualização, todos unidos pelo mesmo objetivo: proporcionar um espaço seguro onde cada paciente possa explorar sua história única, compreender seus conflitos e promover uma real qualidade de vida.
+            </p>
+
+            <div style="text-align: center;">
+                <a href="contato.html" class="btn-cta-about">Falar com um terapeuta agora</a>
+                <br>
+                <a href="index.html" style="display: block; margin-top: 20px; color: var(--secondary); text-decoration: none; font-size: 0.9rem;">
+                    ← Voltar para a página inicial
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Clínica Essência | Psicanálise e Neuropsicanálise Online</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Essência | Psicanálise Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #5c7c8a;
+            --accent: #e67e22; /* Cor de destaque para o botão de agendamento */
+            --whatsapp: #25d366;
+            --bg-light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-light); color: #333; line-height: 1.6; }
+
+        /* --- NAVBAR OTIMIZADA --- */
+        .navbar {
+            background: #fff;
+            padding: 15px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { text-decoration: none; display: flex; flex-direction: column; }
+        .logo-text { font-size: 1.6rem; font-weight: 600; color: var(--secondary); letter-spacing: 1px; }
+        .logo-sub { font-size: 0.8rem; color: #888; text-transform: lowercase; }
+
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #555; font-weight: 500; font-size: 1rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--secondary); }
+        .btn-header { background: var(--primary); color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 0.9rem; }
+
+        /* --- HERO SECTION (CONVERSÃO) --- */
+        .hero {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(207, 222, 243, 0.4) 0%, rgba(224, 234, 252, 0.4) 100%);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .hero h1 { font-size: 3rem; color: var(--primary); margin-bottom: 20px; font-weight: 600; line-height: 1.2; }
+        .hero p { font-size: 1.3rem; color: #555; max-width: 700px; margin: 0 auto 30px; }
+        .cta-main { 
+            background: var(--accent); color: white; padding: 18px 35px; border-radius: 50px; 
+            text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block;
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3); transition: 0.3s;
+        }
+        .cta-main:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(230, 126, 34, 0.4); }
+
+        /* --- GRID DE TERAPEUTAS --- */
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: var(--primary); }
+
+        .grid-terapeutas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .card-clinico {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.4s;
+            display: flex; flex-direction: column;
+        }
+        .card-clinico:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+
+        .foto-perfil {
+            width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 20px;
+            border: 5px solid #f8f9fa; overflow: hidden;
+        }
+        .foto-perfil img { width: 100%; height: 100%; object-fit: cover; }
+
+        .nome-terapeuta { font-size: 1.5rem; color: var(--primary); margin-bottom: 5px; }
+        .foco-atendimento { color: var(--secondary); font-weight: 600; font-size: 0.9rem; margin-bottom: 15px; text-transform: uppercase; }
+        
+        /* Linguagem de Benefício (A dor do paciente) */
+        .beneficios { font-size: 0.95rem; color: #666; margin-bottom: 20px; text-align: left; background: #f9f9f9; padding: 15px; border-radius: 10px; }
+        .beneficios i { color: var(--secondary); margin-right: 8px; }
+
+        .btn-wa {
+            background: var(--whatsapp); color: #fff; padding: 14px; border-radius: 12px;
+            text-decoration: none; font-weight: 600; display: block; transition: 0.3s; margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Simplicidade no mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-text">Clínica Essência</span>
+            <span class="logo-sub">clínica online</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemsomos.html">Sobre Nós</a></li>
+            <li><a href="contato.html" class="btn-header">Agendar Conversa</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Você não precisa enfrentar <br>tudo isso sozinho.</h1>
+        <p>Um espaço seguro e ético para compreender suas angústias através da psicanálise avançada e neuropsicanálise.</p>
+        <a href="#terapeutas" class="cta-main">Agendar primeira sessão</a>
+    </section>
+
+    <div class="container" id="terapeutas">
+        <h2 class="section-title">Nossa Equipe de Especialistas</h2>
+        
+        <div class="grid-terapeutas">
+            <div class="card-clinico">
+                <div class="foto-perfil"><img src="rafael.jpg" alt="Rafael Paixão"></div>
+                <h3 class="nome-terapeuta">Rafael Paixão</h3>
+                <span class="foco-atendimento">Psicanalista Clínico</span>
+                <div class="beneficios">
+                    <div><i class="fas fa-check"></i> Ansiedade e Angústia</div>
+                    <div><i class="fas fa-check"></i> Autoconhecimento Profundo</div>
+                    <div><i class="fas fa-check"></i> Transtornos Parafílicos</div>
+                </div>
+                <a href="https://wa.me/5527988462360?text=Olá!%20Vim%20pelo%20site%20da%20Clínica%20Essência%20e%20gostaria%20de%20agendar%20uma%20conversa."" class="btn-wa" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i> Agendar com Rafael
+</a>
+            </div>
+
+            <div class="card-clinico">
+                <div class="foto-perfil"><img src="rogerio.jfif" alt="Rogério"></div>
+                <h3 class="nome-terapeuta">Rogério Sant'Ana Costa</h3>
+                <span class="foco-atendimento">Psicanalista Clínico</span>
+                <div class="beneficios">
+                    <div><i class="fas fa-check"></i> Neuropsicanálise Aplicada</div>
+                    <div><i class="fas fa-check"></i> Conflitos de Relacionamento</div>
+                    <div><i class="fas fa-check"></i> Equilíbrio Emocional</div>
+                </div>
+                <a href="https://wa.me/5527981118200?text=Olá!%20Vim%20pelo%20site%20da%20Clínica%20Essência%20e%20gostaria%20de%20agendar%20uma%20conversa."" class="btn-wa" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i> Agendar com Rogério
+</a> 
+            </div>
+
+            <div class="card-clinico">
+                <div class="foto-perfil"><img src="enecildo.jpeg" alt="José Enecildo"></div>
+                <h3 class="nome-terapeuta">José Enecildo</h3>
+                <span class="foco-atendimento">Psicanalista Clínico</span>
+                <div class="beneficios">
+                    <div><i class="fas fa-check"></i> Luto e Perdas</div>
+                    <div><i class="fas fa-check"></i> Depressão e Desânimo</div>
+                    <div><i class="fas fa-check"></i> Psicanálise de Adultos</div>
+                </div>
+                <a href="https://wa.me/5527999651228?text=Olá!%20Vim%20pelo%20site%20da%20Clínica%20Essência%20e%20gostaria%20de%20agendar%20uma%20conversa."" class="btn-wa" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i> Agendar com Enecildo
+</a> 
+            </div>
+
+            <div class="card-clinico">
+                <div class="foto-perfil"><img src="neia.jpg" alt="Maria Idnéia"></div>
+                <h3 class="nome-terapeuta">Maria Idnéia</h3>
+                <span class="foco-atendimento">Psicanalista Clínica</span>
+                <div class="beneficios">
+                    <div><i class="fas fa-check"></i> Saúde da Mulher</div>
+                    <div><i class="fas fa-check"></i> Gestão de Estresse</div>
+                    <div><i class="fas fa-check"></i> Desenvolvimento Pessoal</div>
+                </div>
+                <a href="https://wa.me/5527996162993?text=Olá!%20Vim%20pelo%20site%20da%20Clínica%20Essência%20e%20gostaria%20de%20agendar%20uma%20conversa."" class="btn-wa" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i> Agendar com Néia
+</a> 
+            </div>
+
+            <div class="card-clinico">
+                <div class="foto-perfil"><img src="karmen.jpeg" alt="Maria do Carmo"></div>
+                <h3 class="nome-terapeuta">Maria do Carmo Pereira</h3>
+                <span class="foco-atendimento">Psicanalista Clínica</span>
+                <div class="beneficios">
+                    <div><i class="fas fa-check"></i> Terapia de Casal</div>
+                    <div><i class="fas fa-check"></i> Conflitos Familiares</div>
+                    <div><i class="fas fa-check"></i> Adolescência e Crises</div>
+                </div>
+                <a href="https://wa.me/5527999691553?text=Olá!%20Vim%20pelo%20site%20da%20Clínica%20Essência%20e%20gostaria%20de%20agendar%20uma%20conversa."" class="btn-wa" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i> Agendar com Karmen
+</a> 
+            </div>
+
+        </div>
+    </div>
+    <section style="background: #fff; padding: 60px 20px; text-align: center; border-top: 1px solid #eee;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="color: var(--primary); margin-bottom: 15px;">Atendimento Acessível</h2>
+        <p style="color: #666; font-size: 1.1rem; line-height: 1.8;">
+            Nossa missão é democratizar o acesso à saúde emocional. Oferecemos um suporte clínico de alta qualidade com valores pensados para a realidade de pessoas comuns. 
+            <br><strong>Invista em você sem comprometer sua estabilidade.</strong>
+        </p>
+    </div>
+</section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2026 Clínica Essência | Atendimento Ético e Profissional</p>
+    </footer>
+
+</body>
+</html>
